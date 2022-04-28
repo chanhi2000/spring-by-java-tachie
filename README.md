@@ -53,7 +53,7 @@ curl -X POST http://localhost:9191/jobs/importCustomers
 - [x] ~~Configure necessary components~~
 - [x] ~~Setup Basic Batch Operation(s)~~
 - [x] ~~Setup Concurrent Batch Operation(s)~~
-- [ ] Setup CustomerProcessor
+- [x] ~~Setup CustomerProcessor (add users from United States)~~
 
 ## References
 

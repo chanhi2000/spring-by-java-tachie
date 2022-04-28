@@ -6,6 +6,6 @@ import com.example.markiiimark.batchprocessing.entity.Customer
 
 class CustomerProcessor : ItemProcessor<Customer, Customer>{
     override fun process(item: Customer): Customer? {
-        return item
+        return if (item.country == "United States") item else null
     }
 }
