@@ -18,11 +18,11 @@
 - Docker is very convenient for prepping
 - Run the following commands
 
-#### 1. Download Docker Image
+#### ⚡️ Download Docker Image
 ```sh
 docker pull mysql:8.0.29-oracle
 ```
-#### 2. Run the Docker Image
+#### 🐳 Run the Docker Image
 ```sh
 docker run -d -it
 --name mysql-test
@@ -32,7 +32,7 @@ docker run -d -it
 mysql:8.0.29-oracle
 ```
 
-#### 3. Troubleshooting
+#### ⚠ Troubleshooting
 For MySQL 8.x or later, you may encounter the following error when attempting to connect
 > public key retrieval is not allowed
 
