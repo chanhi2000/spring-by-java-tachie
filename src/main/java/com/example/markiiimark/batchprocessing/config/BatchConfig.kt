@@ -16,6 +16,8 @@ import org.springframework.batch.item.file.transform.DelimitedLineTokenizer
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.core.io.FileSystemResource
+import org.springframework.core.task.SimpleAsyncTaskExecutor
+import org.springframework.core.task.TaskExecutor
 
 @Configuration
 @EnableBatchProcessing
@@ -68,6 +70,7 @@ class BatchConfig(
             .reader(reader())
             .processor(processor())
             .writer(writer())
+            .taskExecutor(taskExecutor())
             .build()
     }
 
@@ -78,7 +81,13 @@ class BatchConfig(
             .end()
 //            .next()
             .build()
+    }
 
+    @Bean
+    fun taskExecutor(): TaskExecutor {
+        val asyncTaskExecutor = SimpleAsyncTaskExecutor()
+        asyncTaskExecutor.concurrencyLimit = 10
+        return asyncTaskExecutor
     }
 
 }

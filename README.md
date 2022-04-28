@@ -52,7 +52,8 @@ curl -X POST http://localhost:9191/jobs/importCustomers
 - [x] ~~initialize project~~
 - [x] ~~Configure necessary components~~
 - [x] ~~Setup Basic Batch Operation(s)~~
-- [ ] ~~Setup Concurrent Batch Operation(s)
+- [x] ~~Setup Concurrent Batch Operation(s)~~
+- [ ] Setup CustomerProcessor
 
 ## References
 
